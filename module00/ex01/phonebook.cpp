@@ -6,13 +6,11 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 17:36:50 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/25 18:15:03 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/09/25 18:16:02 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
-
-
 
 void Phonebook::add(int n)
 {
@@ -40,7 +38,7 @@ void Phonebook::add(int n)
     std::cout << contact[n].get_darkestsecret() << std::endl;
     std::cout << std::endl;
 }
-#include <stdio.h>
+
 std::string display_format(std::string word){
     if (word.size() <= 10)
         return (word);
