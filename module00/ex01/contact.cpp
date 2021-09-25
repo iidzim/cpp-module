@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/25 12:47:41 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/25 12:53:05 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/09/25 15:23:06 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,5 @@ void Contact::set_phonenumber(std::string phonenumber){
 }
 
 void Contact::set_darkestsecret(std::string darkestsecret){
-    this->_first_name = darkestsecret;
+    this->_darkest_secret = darkestsecret;
 }
