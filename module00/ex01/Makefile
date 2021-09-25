@@ -6,13 +6,13 @@
 #    By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/18 17:49:46 by iidzim            #+#    #+#              #
-#    Updated: 2021/09/18 17:51:03 by iidzim           ###   ########.fr        #
+#    Updated: 2021/09/25 13:04:20 by iidzim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	megaphone
+NAME	=	phonebook
 
-SRC		=	phonebook.cpp
+SRC		=	phonebook.cpp contact.cpp
 
 FLAGS	=	-Wall -Wextra -Werror
 

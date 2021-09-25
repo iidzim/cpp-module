@@ -3,68 +3,103 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 17:36:50 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/20 23:09:10 by mac              ###   ########.fr       */
+/*   Updated: 2021/09/25 13:27:06 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
 
-void phonebook::add(void)
+
+
+void Phonebook::add(int n)
 {
-    std::cout << "first_name > " << std::endl;
-    std::cin >> first_name;
-    std::cout << "last_name > " << std::endl;
-    std::cin >> last_name;
-    std::cout << "nickname > " << std::endl;
-    std::cin >> nickname;
-    std::cout << "phone_number > " << std::endl;
-    std::cin >> phone_number;
-    std::cout << "darkest_secret > " << std::endl;
-    std::cin >> darkest_secret;
+    std::string firstname;
+    std::string lastname;
+    std::string nickname;
+    std::string phonenumber;
+    std::string darkestsecret;
+
+    std::cout << "first_name > ";
+    getline(std::cin, firstname);
+    contact[n].set_firstname(firstname);
+    std::cout << "last_name > ";
+    getline(std::cin, lastname);
+    contact[n].set_lastname(lastname);
+    std::cout << "nickname > ";
+    getline(std::cin, nickname);
+    contact[n].set_nickname(nickname);
+    std::cout << "phone_number > ";
+    getline(std::cin, phonenumber);
+    contact[n].set_phonenumber(phonenumber);
+    std::cout << "darkest_secret > ";
+    getline(std::cin, darkestsecret);
+    contact[n].set_darkestsecret(darkestsecret);
 }
 
-void phonebook::search(void)
-{
-    std::cout << "index | first name | last name | nickname" << std::endl;
-    
+void Phonebook::search(int index, int n){
+    //* display all contacts
+    for (int i = 0; i < n; i++)
+    {
+        std::cout << "index | first name | last name | nickname" << std::endl;
+        std::cout << n << " | " << contact[n].get_firstname() << " | ";
+        std::cout << contact[n].get_lastname() << " | " << contact[n].get_nickname() << std::endl;
+    }
+    if (index < n && index > 0)
+    {
+        std::cout << " first name = " << contact[n].get_firstname() << std::endl;
+        std::cout << " lsst name = " << contact[n].get_lastname() << std::endl;
+        std::cout << " nickname = " << contact[n].get_nickname() << std::endl;
+        std::cout << "phone number = " << contact[n].get_phonenumber() << std::endl;
+        std::cout << "darkest secret = " << contact[n].get_darkestsecret() << std::endl;
+    }
+    else
+        std::cout << "wrong index" << std::endl;
 }
 
-void phonebook::exit()
-{
+void Phonebook::exit(){
     std::cout << "bye" << std::endl;
+}
+
+std::string start_phonebook(void){
+    std::string action;
+
+    std::cout << "* ADD to add a contact" << std::endl;
+    std::cout << "* SEARCH to display the phonebook" << std::endl;
+    std::cout << "* EXIT to exit the prg" << std::endl;
+    getline(std::cin, action);
+    return (action);
 }
 
 int main(void)
 {
-    phonebook my_pb[8];
+    Phonebook my_pb;
     std::string action;
-    int n;
+    int index, n;
 
     n = 0;
     while (1)
     {
-        std::cout << "ADD to add a contact" << std::endl;
-        std::cout << "SEARCH to display the phonebook" << std::endl;
-        std::cout << "EXIT to exit the prg" << std::endl;
-        std::cin >> action;
+        action = start_phonebook();
         if (action.compare("add") == 0)
         {
             if (n < 8)
                 n = n % 8;
-            my_pb[n].add();
+            my_pb.add(n);
+            n++;
         }
         else if (action.compare("search") == 0)
         {
-            for (int i = 0; i < n; i++)
-                my_pb[i].search();
-            
+            std::cout << "index to contact";
+            // getline(std::cin, index);
+            std::cin >> index;
+            my_pb.search(index, n);
         }
         else if (action.compare("exit") == 0)
         {
-            my_pb[n].exit();
+            my_pb.exit();
             break;
         }
         else

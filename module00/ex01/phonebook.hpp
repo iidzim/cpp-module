@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 17:37:12 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/20 23:02:56 by mac              ###   ########.fr       */
+/*   Updated: 2021/09/25 13:20:10 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,14 @@
 
 #include <iostream>
 #include <string>
+#include "contact.hpp"
 
-class phonebook{
-
+class Phonebook{
 public:
-    std::string first_name;
-    std::string last_name;
-    std::string nickname;
-    std::string phone_number;
-    std::string darkest_secret;
-    
-    void add(void);
-    void search(void);
+    Contact contact[8];
+    void add(int n);
+    void search(int index, int size);
     void exit(void);
 };
-
-
 
 #endif
