@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 13:11:27 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/26 14:11:17 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/09/26 14:32:02 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Zombie{
 private:
     std::string _name;
 public:
-    Zombie();
+    Zombie(std::string name);
     ~Zombie();
     void announce(void);
     void set_name(std::string name);

@@ -6,13 +6,13 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 13:20:30 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/26 14:19:28 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/09/26 14:31:32 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(){
+Zombie::Zombie(std::string name){
     std::cout << "constructor" << std::endl;
 }
 
