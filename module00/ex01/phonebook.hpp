@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 17:37:12 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/25 15:36:29 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/09/26 12:43:04 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Phonebook{
 public:
     Contact contact[8];
     void add(int n);
-    void search(int n, int flag);
+    void search(int n);
     void exit(void);
 };
 

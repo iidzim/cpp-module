@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 17:36:50 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/25 18:16:02 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/09/26 12:51:29 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,22 +47,30 @@ std::string display_format(std::string word){
     return (temp);
 }
 
-void Phonebook::search(int n, int is_full){
-    int index, size;
-    
-    is_full == 1 ? size = 8 : size = n;
-    for (int i = 0; i < size; i++)
+void Phonebook::search(int n){
+    int index;
+    std::string x;
+
+    std::cout << std::setw(10) << "index" << " | " << std::setw(10) << "first name" << " | ";
+    std::cout << std::setw(10) << "last name" << " | " << std::setw(10) << "nickname" << std::endl;
+    for (int i = 0; i < n; i++)
     {
-        std::cout << std::setw(10) << "index" << " | " << std::setw(10) << "first name" << " | ";
-        std::cout << std::setw(10) << "last name" << " | " << std::setw(10) << "nickname" << std::endl;
-        std::cout << std::setw(10) << size << " | ";
+        std::cout << std::setw(10) << i+1 << " | ";
         std::cout << std::setw(10) << display_format(contact[i].get_firstname()) << " | ";
         std::cout << std::setw(10) << display_format(contact[i].get_lastname()) << " | " ;
-        std::cout << std::setw(10) << display_format(contact[i].get_nickname()) << std::endl << std::endl;
+        std::cout << std::setw(10) << display_format(contact[i].get_nickname()) << std::endl;
     }
+    std::cout << std::endl;
     std::cout << "Index to contact > ";
-    std::cin >> index;
-    if (index <= size && index > 0)
+    getline(std::cin, x);
+    try {
+        index = stoi(x);
+        throw(1);
+    }
+    catch(...){
+        std::cout << "invalid index" << std::endl;
+    }
+    if (index <= n && index > 0)
     {
         std::cout << "Contact index " << index << std::endl;
         std::cout << "First name    = " << contact[index - 1].get_firstname() << std::endl;
@@ -71,8 +79,6 @@ void Phonebook::search(int n, int is_full){
         std::cout << "Phone number  = " << contact[index - 1].get_phonenumber() << std::endl;
         std::cout << "Darkest secret= " << contact[index - 1].get_darkestsecret() << std::endl << std::endl;
     }
-    else
-        std::cout << "Wrong index !!!" << std::endl << std::endl;
 }
 
 void Phonebook::exit(){
@@ -97,24 +103,22 @@ int main(void)
     int n, is_full;
 
     is_full = n = 0;
-    while (1)
-    {
+    while (1){
         action = start_phonebook();
-        std::cout << "--------------------" << std::endl;
-        if (action.compare("ADD") == 0)
-        {
-            if (n > 8)
-            {
-                n = n % 8;
-                is_full = 1;
+        std::cout << std::endl;
+        if (action.compare("ADD") == 0){
+            if (n >= 8){
+                std::cout << "/!\\ Phonebook is full" << std::endl;
+                continue;
             }
-            my_pb.add(n);
-            n++;
+            else{
+                my_pb.add(n);
+                n++;
+            }
         }
         else if (action.compare("SEARCH") == 0)
-            my_pb.search(n, is_full);
-        else if (action.compare("EXIT") == 0)
-        {
+            my_pb.search(n);
+        else if (action.compare("EXIT") == 0){
             my_pb.exit();
             break;
         }
