@@ -5,18 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/28 10:46:01 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/28 11:06:15 by iidzim           ###   ########.fr       */
+/*   Created: 2021/09/28 13:06:01 by iidzim            #+#    #+#             */
+/*   Updated: 2021/09/28 13:36:53 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+#include <string>
 
 int main (void){
 
-    Zombie *z;
-    z = newZombie("test");
-    z->announce();
-    randomChump("test2");
-    delete(z);
+    std::string str = "HI THIS IS BRAIN";
+    std::string* stringPTR = &str;
+    std::string& stringREF = str;
+    
+    std::cout << "address of the string: " << &str << std::endl; 
+    std::cout << "address of the string using stringPTR" << stringPTR << std::endl;
+    std::cout << "address of the string using stringREF" <<  << std::endl;
+    std::cout << "value of the string using stringPTR" << *stringPTR << std::endl;
+    std::cout << "value of the string using stringREF" << stringREF << std::endl;
+    return (0);
 }

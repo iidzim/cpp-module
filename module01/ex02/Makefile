@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/28 10:33:54 by iidzim            #+#    #+#              #
-#    Updated: 2021/09/28 11:50:58 by iidzim           ###   ########.fr        #
+#    Created: 2021/09/28 13:06:03 by iidzim            #+#    #+#              #
+#    Updated: 2021/09/28 13:07:14 by iidzim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Zombie
+NAME	=	ex02
 
-SRC		=	main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRC		=	main.cpp
 
 FLAGS	=	-Wall -Wextra -Werror
 
