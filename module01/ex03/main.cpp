@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:36:56 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/29 16:52:41 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/09/29 17:33:33 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include "Weapon.hpp"
 
 int main (void){
-typedef 
     {
         Weapon club = Weapon("crude spiked club");
         HumanA bob("Bob", club);

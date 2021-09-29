@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 15:53:19 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/29 16:50:07 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/09/29 17:37:50 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 Weapon::Weapon(std::string type) : _type(type)
 {
+}
+
+Weapon::~Weapon(void){
+    return ;
 }
 
 void Weapon::setType(std::string type){
