@@ -6,25 +6,18 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 14:59:14 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/30 17:36:15 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/09/30 18:34:20 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "karen.hpp"
+#include "Karen.hpp"
 
 int main (void){
 
     Karen k;
-    typedef void (Karen::*DPTR)(void);
-    typedef void (Karen::*IPTR)(void);
-    typedef void (Karen::*WPTR)(void);
-    typedef void (Karen::*EPTR)(void);
-    DPTR dPtr = &Karen::complain;
-    IPTR iPtr = &Karen::complain;
-    WPTR wPtr = &Karen::complain;
-    EPTR ePtr = &Karen::complain;
-
-    
-
+    k.complain("ERROR");
+    k.complain("WARNING");
+    k.complain("INFO");
+    k.complain("DEBUG");
     return (0);
 }

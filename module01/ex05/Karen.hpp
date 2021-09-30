@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 13:24:20 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/30 17:32:25 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/09/30 18:28:43 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class Karen{
         void warning(void);
         void error(void);
     public:
+        Karen(void);
+        ~Karen(void);
         void complain(std::string level);
 };
 
