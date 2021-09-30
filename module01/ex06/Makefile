@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/30 17:16:35 by iidzim            #+#    #+#              #
-#    Updated: 2021/09/30 17:17:26 by iidzim           ###   ########.fr        #
+#    Created: 2021/09/30 17:47:28 by iidzim            #+#    #+#              #
+#    Updated: 2021/09/30 17:47:36 by iidzim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	karen
+NAME	=	karenFilter
 
 SRC		=	main.cpp Karen.cpp
 

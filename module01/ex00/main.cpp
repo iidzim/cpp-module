@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 10:46:01 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/28 11:06:15 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/09/29 10:57:13 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main (void){
 
-    Zombie *z;
+    Zombie *z, *z2;
     z = newZombie("test");
     z->announce();
     randomChump("test2");

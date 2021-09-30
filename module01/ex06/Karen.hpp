@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.cpp                                           :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/29 16:07:51 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/29 16:21:44 by iidzim           ###   ########.fr       */
+/*   Created: 2021/09/30 17:46:49 by iidzim            #+#    #+#             */
+/*   Updated: 2021/09/30 17:46:53 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef KAREN_HPP
+#define KAREN_HPP
+
 #include <iostream>
 #include <string>
-using namespace std;
 
-class foo{
-  public:
-    string name;
-    
-    int f(void);
+class Karen{
+    private:
+        void debug(void);
+        void info(void);
+        void warning(void);
+        void error(void);
+    public:
+        void complain(std::string level);
 };
 
-int foo::f(string s){
-    cout << "pointer to member function" << s << endl;
-    return (1);
-}
-
-int main (void){
-    int (foo::*fptr)(string) = &foo::f;
-    foo object;
-    (object.*fptr)("call member function through an object");
-    foo *p=&object;
-    (p->*fptr)("call member function through a pointer");
-    return (0);
-}
+#endif
