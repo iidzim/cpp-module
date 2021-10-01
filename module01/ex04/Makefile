@@ -6,7 +6,7 @@
 #    By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/29 17:45:21 by iidzim            #+#    #+#              #
-#    Updated: 2021/09/29 17:46:28 by iidzim           ###   ########.fr        #
+#    Updated: 2021/10/01 14:36:46 by iidzim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,4 +32,4 @@ fclean:		clean
 re:			fclean all
 
 run:		re
-			@ ./$(NAME)
+			@ ./$(NAME) test philosophy CPP

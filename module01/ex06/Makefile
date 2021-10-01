@@ -6,7 +6,7 @@
 #    By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/30 17:47:28 by iidzim            #+#    #+#              #
-#    Updated: 2021/09/30 17:47:36 by iidzim           ###   ########.fr        #
+#    Updated: 2021/10/01 15:20:43 by iidzim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,4 +32,4 @@ fclean:		clean
 re:			fclean all
 
 run:		re
-			@ ./$(NAME)
+			@ ./$(NAME) "WARNING"

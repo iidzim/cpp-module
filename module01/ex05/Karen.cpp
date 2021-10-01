@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 14:58:54 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/30 18:34:09 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/01 15:06:53 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ Karen::~Karen(void){
 
 void Karen::debug(void){
     std::cout << "[ DEBUG ]" << std::endl;
-    std::cout <<  "I love to get extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger.\
-        I just love it!" << std::endl;
+    std::cout <<  "I love to get extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger." << std::endl;
+    std::cout << "I just love it!" << std::endl;
 }
 
 void Karen::warning(void){
@@ -36,8 +36,8 @@ void Karen::warning(void){
 
 void Karen::info(void){
     std::cout << "[ INFO ]" << std::endl;
-    std::cout <<  "I cannot believe adding extra bacon cost more money. \
-        You don’t put enough! If you did I would not have to ask for it!" << std::endl;
+    std::cout <<  "I cannot believe adding extra bacon cost more money." << std::endl;
+    std::cout << "You don’t put enough! If you did I would not have to ask for it!" << std::endl;
 }
 
 void Karen::error(void){
