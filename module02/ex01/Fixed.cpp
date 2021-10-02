@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 16:20:57 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/02 19:02:42 by iidzim           ###   ########.fr       */
+/*   Created: 2021/10/02 16:44:32 by iidzim            #+#    #+#             */
+/*   Updated: 2021/10/02 19:18:20 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Fixed::Fixed(void) : _value(0){
 
 //? Default Destructor
 Fixed::~Fixed(void){
-	std::cout << "Default destructor called" << std::endl;
+	std::cout << "Destructor called" << std::endl;
 }
 
 //? Copy Constructor
@@ -34,29 +34,44 @@ Fixed& Fixed::operator =(Fixed const &f){
 	return (*this);
 }
 
+//? getter
 int Fixed::getRawBits(void) const{
 	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_value);
 }
 
+//? setter
 void Fixed::setRawBits(int const raw){
 	std::cout << "setRawBits member function called" << std::endl;
 	this->_value = raw;
 }
 
-/*
-Default constructor called
-Copy constructor called
-Default constructor called
-Assignation operator called
-getRawBits member function called
-getRawBits member function called
-0
-getRawBits member function called
-0
-getRawBits member function called
-0
-Default desstructor called
-Default desstructor called
-Default desstructor called
-*/
+//************************************************************
+
+//? constructor -> constant integer as a parameter
+Fixed::Fixed(const int i){
+    std::cout << "Int constructor called" << std::endl;
+    this->_value = i * (1 << this->_fract_bits);
+}
+
+//? constructor -> constant float as a parameter
+Fixed::Fixed(const float f){
+    std::cout << "Float constructor called" << std::endl;
+    this->_value = roundf(f * (1 << this->_fract_bits));
+}
+
+//? converts the fixed point value to a floating point value
+float Fixed::toFloat( void ) const{
+    return ((float)(this->_value / (1 << (this->_fract_bits)))); //!!!!
+}
+
+//? converts the fixed point value to an integer value
+int Fixed::toInt( void ) const{
+    return ((int)this->_value / (1 << (this->_fract_bits))); //!!!!!!
+}
+
+//? overload to the « operator
+Fixed& Fixed::operator <<(Fixed const &f){
+    //* watch the video
+    return ();
+}
