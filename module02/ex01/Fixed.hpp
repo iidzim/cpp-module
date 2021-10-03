@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 16:36:39 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/02 19:36:06 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/03 12:37:58 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ class Fixed {
     Fixed(const float f);
     float toFloat( void ) const;
     int toInt( void ) const;
-    std::ostream& operator<<(std::ostream& o, Fixed const &f);
 };
+
+std::ostream& operator<<(std::ostream& os, Fixed const &f);
 
 #endif

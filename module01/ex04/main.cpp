@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 17:45:39 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/01 15:03:46 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/03 12:44:42 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,3 +57,5 @@ int main (int argc, char **argv){
     ofs.close();
     return (0);
 }
+
+//!! newline at the end of file

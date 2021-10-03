@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 16:44:32 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/02 19:36:10 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/03 13:03:53 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ Fixed::~Fixed(void){
 }
 
 //? Copy Constructor
-Fixed::Fixed(const Fixed& f): _value(f._value){
+Fixed::Fixed(const Fixed& f){
 	std::cout << "Copy constructor called" << std::endl;
+	*this = f;
 }
 
 //? Copy Assignment Operator
@@ -36,17 +37,13 @@ Fixed& Fixed::operator=(Fixed const &f){
 
 //? getter
 int Fixed::getRawBits(void) const{
-	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_value);
 }
 
 //? setter
 void Fixed::setRawBits(int const raw){
-	std::cout << "setRawBits member function called" << std::endl;
 	this->_value = raw;
 }
-
-//************************************************************
 
 //? constructor -> constant integer as a parameter
 Fixed::Fixed(const int i){
@@ -62,16 +59,16 @@ Fixed::Fixed(const float f){
 
 //? converts the fixed point value to a floating point value
 float Fixed::toFloat( void ) const{
-    return ((float)(this->_value / (1 << (this->_fract_bits)))); //!!!! cast the value 
+    return ((float)this->_value / (1 << (this->_fract_bits)));
 }
 
 //? converts the fixed point value to an integer value
 int Fixed::toInt( void ) const{
-    return ((int)this->_value / (1 << (this->_fract_bits))); //!!!!!!
+    return ((int)this->_value / (1 << (this->_fract_bits)));
 }
 
 //? overload to the « operator
-std::ostream& Fixed::operator<<(std::ostream& o, Fixed const &f){
-    o << f.getRawBits();
-    return (o);
+std::ostream& operator<<(std::ostream& os, Fixed const &f){
+    os << f.toFloat();
+    return (os);
 }

@@ -6,7 +6,7 @@
 #    By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/02 17:22:56 by iidzim            #+#    #+#              #
-#    Updated: 2021/10/02 17:23:26 by iidzim           ###   ########.fr        #
+#    Updated: 2021/10/03 12:47:03 by iidzim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ OBJS	= 	${SRCS:.cpp=.o}
 all		:	$(NAME)
 
 $(NAME)	:	$(OBJS)
-			clang++ $(SRC) $(FLAGS) -o $(NAME)
+			@ clang++ $(SRC) $(FLAGS) -o $(NAME)
 
 clean	:
 			@ rm -rf $(OBJS)

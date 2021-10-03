@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 16:20:57 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/02 19:02:42 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/03 13:04:53 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,20 +43,3 @@ void Fixed::setRawBits(int const raw){
 	std::cout << "setRawBits member function called" << std::endl;
 	this->_value = raw;
 }
-
-/*
-Default constructor called
-Copy constructor called
-Default constructor called
-Assignation operator called
-getRawBits member function called
-getRawBits member function called
-0
-getRawBits member function called
-0
-getRawBits member function called
-0
-Default desstructor called
-Default desstructor called
-Default desstructor called
-*/
