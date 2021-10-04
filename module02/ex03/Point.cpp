@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:32:50 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/04 18:28:25 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/04 18:41:18 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Point::Point(const Point& p){
     *this = p;
 }
 
-Point::Point(const float x, const float y){//: _x(x), _y(y){
+Point::Point(const float x, const float y){
     this->setX(x);
     this->setY(y);
 }
@@ -42,15 +42,9 @@ Fixed Point::getY(void) const{
 }
 
 void Point::setX(const float x){
-    this->_x = Fixed(x);    
+    this->_x = Fixed(x);
 }
 
 void Point::setY(const float y){
-    this->_y = Fixed(y);    
-}
-
-Fixed Point::area(const Point p1, const Point p2, const Point p3){
-    Fixed Area;
-    Area = ((p1.getX() * (p2.getY() - p3.getY())) + (p2.getX() * (p3.getY() - p1.getY())) + (p3.getX() * (p1.getY() - p2.getY()))) / 2;
-    return (Area);
+    this->_y = Fixed(y);
 }
