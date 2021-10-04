@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 19:09:35 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/03 17:53:29 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/04 13:07:13 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,11 @@ std::ostream& operator<<(std::ostream& os, Fixed const &f){
 
 //?arithmetic operators + - * /
 Fixed Fixed::operator+(Fixed const &f) const{
-    return Fixed((this->_value + f.getRawBits()) / (1 << (this->_fract_bits)));
+    return Fixed((this->toFloat() + f.toFloat()));
 }
 
 Fixed Fixed::operator-(Fixed const &f) const{
-    return Fixed((this->_value - f.getRawBits()) / (1 << (this->_fract_bits)));
+    return Fixed((this->toFloat() - f.toFloat()));
 }
 
 Fixed Fixed::operator*(Fixed const &f) const{
@@ -89,7 +89,7 @@ Fixed Fixed::operator*(Fixed const &f) const{
 }
 
 Fixed Fixed::operator/(Fixed const &f) const{
-    return Fixed(this->_value / f.getRawBits());
+    return Fixed(this->toFloat() / f.toFloat());
 }
 
 //?comparaison operators > < >= <= == !=
@@ -118,41 +118,47 @@ bool Fixed::operator!=(Fixed const &f) const{
 }
 
 //? Pre-increment and post-increment operators
-// //* prefix
-// Fixed& Fixed::operator++(){
-//     this->setRawBits(++(this->toFloat()));
-//     return (*this);
-// }
-
-// //* postfix
-// Fixed& Fixed::operator++(int i){
-//     Fixed copy(*this);
-//     operator++(); //? or ++(*this);
-//     return (copy);
-// }
-
+//* prefix
 Fixed& Fixed::operator++(){
-    // Fixed copy(*this);
-    Fixed copy;
-    copy._value = ++(this->_value);
-    return (copy);
+    ++(this->_value);
+    return (*this);
 }
 
-Fixed& Fixed::operator++(int){
-    Fixed copy;
-    copy._value = (this->_value)++;
+//* postfix
+Fixed Fixed::operator++(int){
+    Fixed copy = (*this);
+    operator++(); //? or ++(*this);
     return (copy);
 }
 
 // //? Pre-decrement and post-decrement operators
-// Fixed& Fixed::operator--(){
-//     this->setRawBits(--(this->toFloat()));
-//     return (*this);
+//* prefix
+Fixed& Fixed::operator--(){
+    --(this->_value);
+    return (*this);
+}
+
+//* postfix
+Fixed Fixed::operator--(int){
+    Fixed copy = (*this);
+    operator--();
+    return (copy);
+}
+
+Fixed& Fixed::min(Fixed f1, Fixed f2){
+    static Fixed min = f1 > f2 ? f2 : f1;
+    return (min);
+}
+
+// static Fixed& Fixed::min(Fixed const &f1, Fixed const &f2){
+    
 // }
 
-// Fixed& Fixed::operator--(int){
-//     Fixed copy(*this);
-//     operator--();
-//     return (copy);
-// }
+Fixed& Fixed::max(Fixed f1, Fixed f2){
+    static Fixed max = f1 < f2 ? f2 : f1;
+    return (max);
+}
 
+// static Fixed& Fixed::max(Fixed const &f1, Fixed const &f2){
+    
+// }
