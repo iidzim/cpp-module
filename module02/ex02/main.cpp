@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 19:10:16 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/04 13:08:38 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/04 15:57:57 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,15 @@ int	main( void )
 	std::cout << "nbr1 <= nbr2 :" << (c <= d) << std::endl;
 	std::cout << "nbr1 == nbr2 :" << (c == d) << std::endl;
 	std::cout << "nbr1 != nbr2 :" << (c != d) << std::endl;
-	
+
+	std::cout << "\nMin & Max functions\n";
 	c = Fixed(4.2f);
 	d = Fixed(13.37f);
+	const Fixed cc = c, cd = d;
 	std::cout << "max of nbr1 and nbr2 is :" << Fixed::max(c, d) << std::endl;
-	c = Fixed(4.2f);
-	d = Fixed(13.37f);
 	std::cout << "min of nbr1 and nbr2 is :" << Fixed::min(c, d) << std::endl;
+	std::cout << "const max of nbr1 and nbr2 is :" << Fixed::max(cc, cd) << std::endl;
+	std::cout << "const min of nbr1 and nbr2 is :" << Fixed::min(cc, cd) << std::endl;
 
 	return (EXIT_SUCCESS);
 }

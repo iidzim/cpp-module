@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 19:09:35 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/04 13:07:13 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/04 16:02:53 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,19 @@
 
 //? Default Constructor
 Fixed::Fixed(void) : _value(0){
-	// std::cout << "Default constructor called" << std::endl;
 }
 
 //? Default Destructor
 Fixed::~Fixed(void){
-	// std::cout << "Destructor called" << std::endl;
 }
 
 //? Copy Constructor
 Fixed::Fixed(const Fixed& f){
-	// std::cout << "Copy constructor called" << std::endl;
 	*this = f;
 }
 
 //? Copy Assignment Operator
 Fixed& Fixed::operator=(Fixed const &f){
-	// std::cout << "Assignation operator called" << std::endl;
 	this->_value = f.getRawBits();
 	return (*this);
 }
@@ -72,8 +68,6 @@ std::ostream& operator<<(std::ostream& os, Fixed const &f){
     os << f.toFloat();
     return (os);
 }
-
-//************
 
 //?arithmetic operators + - * /
 Fixed Fixed::operator+(Fixed const &f) const{
@@ -118,13 +112,11 @@ bool Fixed::operator!=(Fixed const &f) const{
 }
 
 //? Pre-increment and post-increment operators
-//* prefix
 Fixed& Fixed::operator++(){
     ++(this->_value);
     return (*this);
 }
 
-//* postfix
 Fixed Fixed::operator++(int){
     Fixed copy = (*this);
     operator++(); //? or ++(*this);
@@ -132,33 +124,31 @@ Fixed Fixed::operator++(int){
 }
 
 // //? Pre-decrement and post-decrement operators
-//* prefix
 Fixed& Fixed::operator--(){
     --(this->_value);
     return (*this);
 }
 
-//* postfix
 Fixed Fixed::operator--(int){
     Fixed copy = (*this);
     operator--();
     return (copy);
 }
 
-Fixed& Fixed::min(Fixed f1, Fixed f2){
+Fixed& Fixed::min(Fixed &f1, Fixed &f2){
+    return(f1 > f2 ? f2 : f1);
+}
+
+Fixed& Fixed::min(Fixed const &f1, Fixed const &f2){
     static Fixed min = f1 > f2 ? f2 : f1;
     return (min);
 }
 
-// static Fixed& Fixed::min(Fixed const &f1, Fixed const &f2){
-    
-// }
+Fixed& Fixed::max(Fixed& f1, Fixed& f2){
+    return (f1 < f2 ? f2 : f1);
+}
 
-Fixed& Fixed::max(Fixed f1, Fixed f2){
+Fixed& Fixed::max(Fixed const &f1, Fixed const &f2){
     static Fixed max = f1 < f2 ? f2 : f1;
     return (max);
 }
-
-// static Fixed& Fixed::max(Fixed const &f1, Fixed const &f2){
-    
-// }
