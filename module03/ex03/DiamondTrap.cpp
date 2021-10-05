@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:53:08 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 18:22:06 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/05 19:09:09 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 FragTrap::FragTrap(void){
     std::cout << "DiamondTrap Constructor called" << std::endl;
+}
+
+FragTrap::FragTrap(std::string name) : ClapTrap(name), FragTrap(_){
+    std::cout << "DiamondTrap Parameterized Constructor called" << std::endl;
+    this->_name = name;
     this->_HitPoints = ;
     this->_EnergyPoints = ;
     this->_AttackDamage = ;

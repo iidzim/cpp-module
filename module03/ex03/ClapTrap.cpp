@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:48:50 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 18:56:13 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/05 19:07:13 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ ClapTrap::~ClapTrap(void){
     std::cout << "ClapTrap Destructor called " << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& c){
+ClapTrap::ClapTrap(const ClapTrap& c) : ClapTrap(c._name){
     std::cout << "ClapTrap Copy Constructor called " << std::endl;
     *this = c;
 }
