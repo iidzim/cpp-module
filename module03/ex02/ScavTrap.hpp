@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 16:51:15 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 18:59:22 by iidzim           ###   ########.fr       */
+/*   Created: 2021/10/05 16:15:34 by iidzim            #+#    #+#             */
+/*   Updated: 2021/10/05 18:52:41 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-class  ScavTrap : virtual public ClapTrap{
+class  ScavTrap : public ClapTrap{
     public:
 	    ScavTrap(void);
 	    ~ScavTrap(void);

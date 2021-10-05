@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 20:18:13 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 11:17:29 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/05 18:37:48 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 int main (void){
 
-    ClapTrap player1;
-    ClapTrap player2;
-    ClapTrap player3;
-    player1.setName("player1");
-    player2.setName("player2");
-    player3 = player1;
-    player3.setName("player3");
+    ClapTrap player1("player1");
+    ClapTrap player2("player2");
+    ClapTrap player3("player3");
     player1.attack("player2");
     player2.attack("player3");
     player2.takeDamage(4);

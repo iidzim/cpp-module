@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 16:50:34 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 18:58:09 by iidzim           ###   ########.fr       */
+/*   Created: 2021/10/05 16:19:15 by iidzim            #+#    #+#             */
+/*   Updated: 2021/10/05 18:51:31 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ FragTrap::~FragTrap(void){
     std::cout << "FragTrap Destructor called " << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap& c){
+FragTrap::FragTrap(const FragTrap& c) : ClapTrap(c._name){
     std::cout << "FragTrap Copy Constructor called " << std::endl;
     *this = c;
 }
@@ -43,5 +43,5 @@ FragTrap& FragTrap::operator=(FragTrap const &c){
 }
 
 void FragTrap::highFivesGuys(void){
-    std::cout << " highFivesGuys ! " << std::endl;
+    std::cout << " high fives " << std::endl;
 }

@@ -5,30 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 11:25:18 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 18:47:24 by iidzim           ###   ########.fr       */
+/*   Created: 2021/10/05 16:15:18 by iidzim            #+#    #+#             */
+/*   Updated: 2021/10/05 18:53:08 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(void){
-    std::cout << "ScavTrap Default Constructor called" << std::endl;
+    std::cout << "ScavTrap Constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
-    std::cout << "ScavTrap Parameterized Constructor called" << std::endl;
     this->_name = name;
     this->_HitPoints = 100;
-    this->_EnergyPoints = 50;
-    this->_AttackDamage =20;
+    this->_EnergyPoints = 100;
+    this->_AttackDamage = 30;
+    std::cout << "ScavTrap Parameterized Constructor called" << std::endl;
 }
 
 ScavTrap::~ScavTrap(void){
     std::cout << "ScavTrap Destructor called " << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& c): ClapTrap(c._name){
+ScavTrap::ScavTrap(const ScavTrap& c) : ClapTrap(c._name){
     std::cout << "ScavTrap Copy Constructor called " << std::endl;
     *this = c;
 }

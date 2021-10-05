@@ -6,14 +6,18 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 20:18:51 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 11:22:31 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/05 18:41:49 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void): _HitPoints(10), _EnergyPoints(10), _AttackDamage(0){
-    std::cout << "ClapTrap Constructor called" << std::endl;
+ClapTrap::ClapTrap(void){
+    std::cout << "ClapTrap Default Constructor called" << std::endl;
+}
+
+ClapTrap::ClapTrap(std::string name): _name(name), _HitPoints(10), _EnergyPoints(10), _AttackDamage(0){
+    std::cout << "ClapTrap Parameterized Constructor called" << std::endl;
 }
 
 ClapTrap::~ClapTrap(void){
@@ -32,10 +36,6 @@ ClapTrap& ClapTrap::operator=(ClapTrap const &c){
     this->_EnergyPoints = c._EnergyPoints;
     this->_AttackDamage = c._AttackDamage;
     return (*this);
-}
-
-void ClapTrap::setName(std::string name){
-    this->_name = name;
 }
 
 void ClapTrap::attack(std::string const & target){

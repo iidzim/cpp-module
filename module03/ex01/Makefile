@@ -6,13 +6,13 @@
 #    By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:24:53 by iidzim            #+#    #+#              #
-#    Updated: 2021/10/05 11:25:07 by iidzim           ###   ########.fr        #
+#    Updated: 2021/10/05 15:58:02 by iidzim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	ScavTrap
 
-SRC		=	main.cpp ClapTrap.cpp
+SRC		=	main.cpp ClapTrap.cpp ScavTrap.cpp
 
 FLAGS	=	-Wall -Wextra -Werror
 

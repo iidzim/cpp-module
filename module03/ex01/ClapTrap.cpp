@@ -6,14 +6,22 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:24:36 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 11:24:38 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/05 18:45:59 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void): _HitPoints(10), _EnergyPoints(10), _AttackDamage(0){
-    std::cout << "ClapTrap Constructor called" << std::endl;
+ClapTrap::ClapTrap(void){
+    std::cout << "ClapTrap Default Constructor called" << std::endl;
+}
+
+ClapTrap::ClapTrap(std::string name){
+    this->_name = name;
+    this->_HitPoints = 100;
+    this->_EnergyPoints = 50;
+    this->_AttackDamage = 20;
+    std::cout << "ClapTrap Parameterized Constructor called" << std::endl;
 }
 
 ClapTrap::~ClapTrap(void){

@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/05 16:52:21 by iidzim            #+#    #+#              #
-#    Updated: 2021/10/05 18:16:41 by iidzim           ###   ########.fr        #
+#    Created: 2021/10/05 16:15:58 by iidzim            #+#    #+#              #
+#    Updated: 2021/10/05 16:16:12 by iidzim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	DimaondTrap
+NAME	=	FragTrap
 
 SRC		=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
-FLAGS	=	-Wall -Wextra -Werror -Wshadow -Wno-shadow
+FLAGS	=	-Wall -Wextra -Werror
 
 OBJS	= 	${SRCS:.cpp=.o}
 

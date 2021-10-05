@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 16:48:50 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 18:56:13 by iidzim           ###   ########.fr       */
+/*   Created: 2021/10/05 16:14:37 by iidzim            #+#    #+#             */
+/*   Updated: 2021/10/05 18:49:14 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ ClapTrap::ClapTrap(void){
     std::cout << "ClapTrap Constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name): ClapTrap(name){
+ClapTrap::ClapTrap(std::string name){
     this->_name = name;
     this->_HitPoints = 100;
     this->_EnergyPoints = 100;
@@ -40,6 +40,10 @@ ClapTrap& ClapTrap::operator=(ClapTrap const &c){
     this->_EnergyPoints = c._EnergyPoints;
     this->_AttackDamage = c._AttackDamage;
     return (*this);
+}
+
+void ClapTrap::setName(std::string name){
+    this->_name = name;
 }
 
 void ClapTrap::attack(std::string const & target){
