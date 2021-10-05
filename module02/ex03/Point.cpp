@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:32:50 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/04 19:06:36 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/05 10:29:30 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ Point::Point(const float x, const float y){
 }
 
 Point& Point::operator=(Point const &p){
+    // this->_x = p.getX();//?
+    // this->_y = p.getY();//?
     this->setX(p.getX().toFloat());
     this->setY(p.getY().toFloat());
     return (*this);
