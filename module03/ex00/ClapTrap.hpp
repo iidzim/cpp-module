@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 20:19:00 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 11:16:05 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/05 12:43:12 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@
 #include <iostream>
 #include <string>
 
-
 class ClapTrap{
 
-  private:
+  protected:
 	std::string _name;
 	int _HitPoints;
 	int _EnergyPoints;

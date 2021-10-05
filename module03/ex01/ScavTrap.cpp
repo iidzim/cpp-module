@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:25:18 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 11:58:41 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/05 15:53:36 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,17 @@ ScavTrap::ScavTrap(const ScavTrap& c){
 
 ScavTrap& ScavTrap::operator=(ScavTrap const &c){
 	std::cout << "ScavTrap Assignation operator called" << std::endl;
+    this->_name = c.name;
+    this->_HitPoint = c.HitPoint;
+    this->_EnergyPoint = c._EnergyPoint;
+    this->_AttackDamage = c.AttackDamage;
     return (*this);
 }
 
-void ScavTrap::guardGate(){
+void ScavTrap::attack(std::string const & target){
+    std::cout << "ScavTrap " << _name << " attack " << target << " causing " <<  _AttackDamage << " points of damage!" << std::endl;
+}
+
+void ScavTrap::guardGate(void){
     std::cout << "ScavTrap have enterred in Gate keeper mode" << std::endl;
-} 
+}
