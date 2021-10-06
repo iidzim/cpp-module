@@ -6,22 +6,23 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:53:08 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 19:09:09 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/06 18:08:48 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-FragTrap::FragTrap(void){
+DiamondTrap::DiamondTrap(void){
     std::cout << "DiamondTrap Constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name), FragTrap(_){
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), FragTrap(name), ScavTrap(name){
     std::cout << "DiamondTrap Parameterized Constructor called" << std::endl;
     this->_name = name;
-    this->_HitPoints = ;
-    this->_EnergyPoints = ;
-    this->_AttackDamage = ;
+    ClapTrap::_name = name + "_clap_name";
+    this->_HitPoints = FragTrap::_HitPoints;
+    this->_EnergyPoints = ScavTrap::_EnergyPoints;
+    this->_AttackDamage = FragTrap::_AttackDamage;
 }
 
 DiamondTrap::~DiamondTrap(void){
@@ -42,6 +43,10 @@ DiamondTrap& DiamondTrap::operator=(DiamondTrap const &c){
     return (*this);
 }
 
+void DiamondTrap::attack(std::string const & target){
+    ScavTrap::attack(target);
+}
+
 void DiamondTrap::whoAmI(void){
-    std::cout << " " << std::endl;
+    std::cout << this->_name << " | " << ClapTrap::_name << std::endl;
 }
