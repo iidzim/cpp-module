@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:19:15 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 18:51:31 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/06 17:54:35 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ FragTrap::FragTrap(void){
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name){
-    this->_name = name;
     this->_HitPoints = 100;
     this->_EnergyPoints = 100;
     this->_AttackDamage = 30;

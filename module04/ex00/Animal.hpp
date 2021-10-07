@@ -1,27 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 16:40:20 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/06 18:08:55 by iidzim           ###   ########.fr       */
+/*   Created: 2021/10/07 20:50:42 by iidzim            #+#    #+#             */
+/*   Updated: 2021/10/07 21:37:18 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-int main (void){
+class Animal{
+  protected;  
+    std::string _name;
+  public:
+    Animal(void);
+    ~Animal(void);
+    Animal(const Animal& a);
+	  Animal& operator=(Animal const &c);
+    void set_type(std::string);
+    std::string get_type(void);
+    void makeSound(void);
+};
 
-    FragTrap player1("player1");
-    FragTrap player2("player2");
-    FragTrap player3("player3");
-    player1.attack("player2");
-    player2.attack("player3");
-    player2.takeDamage(4);
-    player3.takeDamage(4);
-    player1.beRepaired(2);
-    player1.highFivesGuys();
-    return (0);
-}
+class Dog : public Animal{
+    
+};
+
+class Cat : public Animal{
+  
+};
+
+#endif

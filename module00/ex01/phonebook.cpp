@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 17:36:50 by iidzim            #+#    #+#             */
-/*   Updated: 2021/09/26 12:51:29 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/07 21:40:15 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void Phonebook::add(int n)
     std::cout << "darkest_secret > ";
     getline(std::cin, darkestsecret);
     contact[n].set_darkestsecret(darkestsecret);
-    std::cout << contact[n].get_darkestsecret() << std::endl;
     std::cout << std::endl;
 }
 
