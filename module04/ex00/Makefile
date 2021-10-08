@@ -6,13 +6,13 @@
 #    By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 18:16:53 by iidzim            #+#    #+#              #
-#    Updated: 2021/10/08 19:50:57 by iidzim           ###   ########.fr        #
+#    Updated: 2021/10/08 21:33:30 by iidzim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	ex00
 
-SRC		=	main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRC		=	main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp
 
 FLAGS	=	-Wall -Wextra -Werror
 
@@ -20,7 +20,7 @@ OBJS	= 	${SRCS:.cpp=.o}
 
 all		:	$(NAME)
 
-$(NAME)	:	$(OBJS)
+$(NAME)	:	$(SRC)
 			@ clang++ $(SRC) $(FLAGS) -o $(NAME)
 
 clean	:

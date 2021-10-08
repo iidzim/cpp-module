@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 13:24:49 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 20:26:55 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/08 21:11:07 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Cat : public Animal {
 	~Cat(void);
 	Cat(const Cat& cat);
 	Cat& operator=(Cat const &cat);
-	void makeSound(void);
+	void makeSound(void) const;
 };
 
 #endif

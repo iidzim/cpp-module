@@ -6,13 +6,14 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 17:15:58 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 20:53:56 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/08 21:28:56 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 Animal::Animal(void): _type("undefined"){
+    std::cout << "Default Constructor Animal" << std::endl;
 }
 
 Animal::~Animal(void){}
@@ -25,11 +26,11 @@ Animal::Animal(std::string type): _type(type){
 }
 
 Animal& Animal::operator=(Animal const &animal){
-    this->_type = animal.get_type();
+    this->_type = animal.getType();
     return (*this);
 }
 
-std::string Animal::get_type(void) const{
+std::string Animal::getType(void) const{
     return (this->_type);
 }
 
@@ -37,6 +38,6 @@ void Animal::set_type(std::string type){
     this->_type = type;
 }
 
-void Animal::makeSound(void){
-    std::cout << "********" << std::endl;
+void Animal::makeSound(void) const{
+    std::cout << "animal sound" << std::endl;
 }

@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/08 13:24:40 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 21:27:48 by iidzim           ###   ########.fr       */
+/*   Created: 2021/10/08 13:25:14 by iidzim            #+#    #+#             */
+/*   Updated: 2021/10/08 21:39:27 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Dog.hpp"
 
-Cat::Cat(void) : Animal("Cat"){
-	std::cout << "Default Constructor Cat" << std::endl;
+Dog::Dog(void) : Animal("Dog"){
+	std::cout << "Default Constructor Dog" << std::endl;
+	Brain *brain = new Brain();
 }
 
-Cat::~Cat(void){
-	std::cout << "Default Destructor Cat" << std::endl;
+Dog::~Dog(void){
+	std::cout << "Default Destructor Dog" << std::endl;
 }
 
-Cat::Cat(const Cat& cat){
-	std::cout << "Copy Constructor Cat" << std::endl;
-	*this = cat;	
+Dog::Dog(const Dog& dog){
+	std::cout << "Copy Constructor Dog" << std::endl;
+	*this = dog;
 }
 
-Cat& Cat::operator=(Cat const &cat)
+Dog& Dog::operator=(Dog const &dog)
 {
-	this->_type = cat.getType();
+	this->_type = dog.getType();
 	return (*this);
 }
 
-void Cat::makeSound(void) const{
-	std::cout << "meow meow " << std::endl;
+void Dog::makeSound(void) const{
+	std::cout << "how how how" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 13:25:14 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 20:32:03 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/08 21:11:26 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ Dog::Dog(const Dog& dog){
 
 Dog& Dog::operator=(Dog const &dog)
 {
-	this->_type = dog.get_type();
+	this->_type = dog.getType();
 	return (*this);
 }
 
-void Dog::makeSound(void){
+void Dog::makeSound(void) const{
 	std::cout << "how how how" << std::endl;
 }

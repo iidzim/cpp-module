@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/08 13:24:40 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 21:27:48 by iidzim           ###   ########.fr       */
+/*   Created: 2021/10/08 21:34:09 by iidzim            #+#    #+#             */
+/*   Updated: 2021/10/08 21:42:04 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Animal.hpp"
 #include "Cat.hpp"
+#include "Dog.hpp"
+#include "Brain.hpp"
 
-Cat::Cat(void) : Animal("Cat"){
-	std::cout << "Default Constructor Cat" << std::endl;
-}
+int main(void){
 
-Cat::~Cat(void){
-	std::cout << "Default Destructor Cat" << std::endl;
-}
+    int N = 10;
+    Animal *animals = new Animal[N];
 
-Cat::Cat(const Cat& cat){
-	std::cout << "Copy Constructor Cat" << std::endl;
-	*this = cat;	
-}
-
-Cat& Cat::operator=(Cat const &cat)
-{
-	this->_type = cat.getType();
-	return (*this);
-}
-
-void Cat::makeSound(void) const{
-	std::cout << "meow meow " << std::endl;
+    for (int i = 0; i < N; i++)
+    {
+        
+    }
+	delete(cat_brain);
+	delete(dog_brain);
+    return (0);
 }

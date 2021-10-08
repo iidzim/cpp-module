@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/05 16:15:58 by iidzim            #+#    #+#              #
-#    Updated: 2021/10/08 21:33:55 by iidzim           ###   ########.fr        #
+#    Created: 2021/10/08 21:32:08 by iidzim            #+#    #+#              #
+#    Updated: 2021/10/08 21:33:24 by iidzim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	FragTrap
+NAME	=	ex00
 
-SRC		=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRC		=	main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
 
 FLAGS	=	-Wall -Wextra -Werror
 
