@@ -6,13 +6,13 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:14:37 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 18:49:14 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/08 19:03:21 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void){
+ClapTrap::ClapTrap(void) : _HitPoints(100), _EnergyPoints(100), _AttackDamage(30){
     std::cout << "ClapTrap Constructor called" << std::endl;
 }
 

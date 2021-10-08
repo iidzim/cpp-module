@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:19:15 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/06 17:54:35 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/08 19:06:35 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ FragTrap& FragTrap::operator=(FragTrap const &c){
 }
 
 void FragTrap::highFivesGuys(void){
-    std::cout << " high fives " << std::endl;
+    std::cout << " High fives " << std::endl;
 }

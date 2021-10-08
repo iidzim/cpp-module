@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 11:25:31 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 18:40:26 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/08 18:56:18 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class  ScavTrap : public ClapTrap{
 	    ScavTrap(const ScavTrap& c);
 	    ScavTrap& operator=(ScavTrap const &c);
 		void attack(std::string const & target);
-		void guardGate();
+		void guardGate(void);
 };
 
 #endif

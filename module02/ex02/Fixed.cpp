@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 19:09:35 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/04 16:02:53 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/08 18:21:45 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,11 @@ void Fixed::setRawBits(int const raw){
 
 //? constructor -> constant integer as a parameter
 Fixed::Fixed(const int i){
-    // std::cout << "Int constructor called" << std::endl;
     this->_value = i * (1 << this->_fract_bits);
 }
 
 //? constructor -> constant float as a parameter
 Fixed::Fixed(const float f){
-    // std::cout << "Float constructor called" << std::endl;
     this->_value = roundf(f * (1 << this->_fract_bits));
 }
 

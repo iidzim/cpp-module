@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/01 18:45:56 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/02 16:43:38 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/08 18:10:14 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,3 @@ int main (void){
     std::cout << c.getRawBits() << std::endl;
     return (0);
 }
-
-/*
-Default constructor called
-Copy constructor called
-Assignation operator called // <-- This line may be missing depending on your implementation
-getRawBits member function called
-Default constructor called*
-Assignation operator called
-getRawBits member function called
-getRawBits member function called
-0
-getRawBits member function called
-0
-getRawBits member function called
-0
-Destructor called
-Destructor called
-Destructor called
-*/
