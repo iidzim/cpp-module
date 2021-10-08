@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:50:42 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/07 21:37:18 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/08 13:22:54 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,8 @@ class Animal{
     void makeSound(void);
 };
 
-class Dog : public Animal{
-    
-};
-
-class Cat : public Animal{
-  
-};
-
 #endif
+
+//? polymorphism 
+//? pure function '= 0' at the end of the function prototype
+//? abstract class

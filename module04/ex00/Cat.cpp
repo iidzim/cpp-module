@@ -1,24 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 16:51:52 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 16:35:23 by iidzim           ###   ########.fr       */
+/*   Created: 2021/10/08 13:24:40 by iidzim            #+#    #+#             */
+/*   Updated: 2021/10/08 15:48:50 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#include "Cat.hpp"
 
-int main (void){
+Cat::Cat(void)
+{
+}
 
-    DiamondTrap d("oumixa");
+Cat::Cat(const Cat& src)
+{
+}
 
-    // d.attack("iii");
-    // d.guardGate();
-    // d.highFivesGuys();
-    d.whoAmI();
-    return (0);
+Cat::~Cat(void)
+{
+}
+
+Cat& Cat::operator=( Cat const & rhs )
+{
+	//if ( this != &rhs )
+	//{
+		//this->_value = rhs.getValue();
+	//}
+	return *this;
+}
+
+std::ostream& operator<<(std::ostream & o, Cat const & i)
+{
+	//o << "Value = " << i.getValue();
+	return o;
 }

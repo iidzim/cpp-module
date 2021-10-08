@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 16:51:52 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 16:35:23 by iidzim           ###   ########.fr       */
+/*   Created: 2021/10/08 13:25:33 by iidzim            #+#    #+#             */
+/*   Updated: 2021/10/08 13:25:49 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#ifndef DOG_HPP
+# define DOG_HPP
 
-int main (void){
+# include <iostream>
+# include <string>
 
-    DiamondTrap d("oumixa");
+class Dog
+{
 
-    // d.attack("iii");
-    // d.guardGate();
-    // d.highFivesGuys();
-    d.whoAmI();
-    return (0);
-}
+	public:
+
+		Dog();
+		Dog( Dog const & src );
+		~Dog();
+
+		Dog& operator=( Dog const & rhs );
+
+	private:
+
+};
+
+std::ostream & operator<<( std::ostream & o, Dog const & i );
+
+#endif

@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 16:51:52 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 16:35:23 by iidzim           ###   ########.fr       */
+/*   Created: 2021/10/08 17:15:58 by iidzim            #+#    #+#             */
+/*   Updated: 2021/10/08 17:19:11 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#include "Animal.hpp"
 
-int main (void){
+Animal::Animal(void){}
 
-    DiamondTrap d("oumixa");
+Animal::~Animal(void){}
 
-    // d.attack("iii");
-    // d.guardGate();
-    // d.highFivesGuys();
-    d.whoAmI();
-    return (0);
-}
+

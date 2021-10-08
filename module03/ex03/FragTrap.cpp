@@ -6,13 +6,13 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:50:34 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 19:06:48 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/08 17:14:01 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(void){
+FragTrap::FragTrap(void) : _HitPoints(100), _EnergyPoints(100), _AttackDamage(30){
     std::cout << "FragTrap Constructor called" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/04 16:32:56 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 10:28:44 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/08 17:54:58 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ class Point{
   private:
     const Fixed _x;
     const Fixed _y;
-    //? Fixed area;
 
   public:
     Point(void);
@@ -29,11 +28,10 @@ class Point{
     Point& operator=(Point const &p);
     Fixed getX(void) const;
     Fixed getY(void) const;
-    void setX(const float x);
-    void setY(const float y);
 };
 
-Fixed area(const Point p1, const Point p2, const Point p3);
-bool bsp(Point const a, Point const b, Point const c, Point const point);
+std::ostream& operator<<(std::ostream& os, Point const &f);
+Fixed area(const Point &p1, const Point &p2, const Point &p3);
+bool bsp(Point const &a, Point const &b, Point const &c, Point const &point);
 
 #endif

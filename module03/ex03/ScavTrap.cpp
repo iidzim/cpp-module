@@ -6,21 +6,21 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 16:51:00 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/05 19:10:04 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/08 17:14:14 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(void){
+ScavTrap::ScavTrap(void) : _HitPoints(100), _EnergyPoints(50), _AttackDamage(20){
     std::cout << "ScavTrap Constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
     this->_name = name;
     this->_HitPoints = 100;
-    this->_EnergyPoints = 100;
-    this->_AttackDamage = 30;
+    this->_EnergyPoints = 50;
+    this->_AttackDamage = 20;
     std::cout << "ScavTrap Parameterized Constructor called" << std::endl;
 }
 

@@ -1,24 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 16:51:52 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 16:35:23 by iidzim           ###   ########.fr       */
+/*   Created: 2021/10/08 13:25:14 by iidzim            #+#    #+#             */
+/*   Updated: 2021/10/08 13:25:22 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#include "Dog.hpp"
 
-int main (void){
+Dog::Dog()
+{
+}
 
-    DiamondTrap d("oumixa");
+Dog::Dog( const Dog & src )
+{
+}
 
-    // d.attack("iii");
-    // d.guardGate();
-    // d.highFivesGuys();
-    d.whoAmI();
-    return (0);
+Dog::~Dog()
+{
+}
+
+Dog &				Dog::operator=( Dog const & rhs )
+{
+	//if ( this != &rhs )
+	//{
+		//this->_value = rhs.getValue();
+	//}
+	return *this;
+}
+
+std::ostream &			operator<<( std::ostream & o, Dog const & i )
+{
+	//o << "Value = " << i.getValue();
+	return o;
 }
