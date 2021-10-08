@@ -6,23 +6,27 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:50:42 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 13:22:54 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/08 20:47:14 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ANIMAL_HPP
 # define ANIMAL_HPP
 
+#include <iostream>
+#include <string>
+
 class Animal{
-  protected;  
-    std::string _name;
+  protected:
+    std::string _type;
   public:
     Animal(void);
     ~Animal(void);
-    Animal(const Animal& a);
+    Animal(const Animal& animal);
+    Animal(std::string type);
 	  Animal& operator=(Animal const &c);
     void set_type(std::string);
-    std::string get_type(void);
+    std::string get_type(void)const;
     void makeSound(void);
 };
 

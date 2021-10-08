@@ -6,35 +6,31 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 13:25:14 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 13:25:22 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/08 20:32:03 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog()
-{
+Dog::Dog(void) : Animal("Dog"){
+	std::cout << "Default Constructor Dog" << std::endl;
 }
 
-Dog::Dog( const Dog & src )
-{
+Dog::~Dog(void){
+	std::cout << "Default Destructor Dog" << std::endl;
 }
 
-Dog::~Dog()
-{
+Dog::Dog(const Dog& dog){
+	std::cout << "Copy Constructor Dog" << std::endl;
+	*this = dog;
 }
 
-Dog &				Dog::operator=( Dog const & rhs )
+Dog& Dog::operator=(Dog const &dog)
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	return *this;
+	this->_type = dog.get_type();
+	return (*this);
 }
 
-std::ostream &			operator<<( std::ostream & o, Dog const & i )
-{
-	//o << "Value = " << i.getValue();
-	return o;
+void Dog::makeSound(void){
+	std::cout << "how how how" << std::endl;
 }
