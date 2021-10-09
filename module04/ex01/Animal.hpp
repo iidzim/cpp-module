@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/08 13:25:33 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/09 13:07:03 by iidzim           ###   ########.fr       */
+/*   Created: 2021/10/07 20:50:42 by iidzim            #+#    #+#             */
+/*   Updated: 2021/10/09 13:06:29 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include <iostream>
+#include <string>
 
-class Dog : public Animal {
-  private:
-	Brain* _brain;
+class Animal{
+  protected:
+    std::string _type;
   public:
-	Dog(void);
-	~Dog(void);
-	Dog(const Dog& dog);
-	void deepCopy(const Dog& dog);
-	Dog& operator=(Dog const &dog);
-	void makeSound(void) const;
+    Animal(void);
+    virtual ~Animal(void);
+    Animal(const Animal& animal);
+    Animal(std::string type);
+	  Animal& operator=(Animal const &c);
+    void set_type(std::string);
+    std::string getType(void)const;
+    virtual void makeSound(void) const;
 };
 
 #endif

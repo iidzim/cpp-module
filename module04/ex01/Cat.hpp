@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 13:24:49 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 21:38:18 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/09 13:06:59 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ class Cat : public Animal {
   public:
 	Cat(void);
 	~Cat(void);
-	Cat(const Cat& cat);
+	Cat(const Cat& cat); //? use deep copy
+	void deepCopy(const Cat& cat);
 	Cat& operator=(Cat const &cat);
 	void makeSound(void) const;
 };

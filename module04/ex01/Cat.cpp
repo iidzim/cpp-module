@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 13:24:40 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 21:27:48 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/09 12:35:54 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,25 @@ Cat::~Cat(void){
 	std::cout << "Default Destructor Cat" << std::endl;
 }
 
+void Cat::deepCopy(const Cat& cat){
+	delete[]_brain;
+	if (cat._brain){
+		this->_brain = new Brain();
+		this->_brain = cat._brain;
+	}
+	else
+		this->_brain = NULL;
+}
+
 Cat::Cat(const Cat& cat){
-	std::cout << "Copy Constructor Cat" << std::endl;
-	*this = cat;	
+	std::cout << "Deep Copy Constructor Cat" << std::endl;
+	deepCopy(cat);
 }
 
 Cat& Cat::operator=(Cat const &cat)
 {
-	this->_type = cat.getType();
+	if (this != &cat)
+		deepCopy(cat);
 	return (*this);
 }
 
