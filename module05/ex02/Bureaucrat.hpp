@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:17:51 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/10 14:48:47 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/10 17:53:36 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class Bureaucrat{
 		void incrementGrade(void);
 		void decrementGrade(void);
 		void signForm(const Form& f);
+		void executeForm(Form const & form);
 		class GradeTooHighException : public std::exception{
 			public:
 				virtual const char* what() const throw(){ return ("Grade Too High !"); }

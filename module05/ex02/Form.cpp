@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 12:00:25 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/10 15:01:03 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/10 18:14:55 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ Form::Form(std::string name, int sign_grade, int exec_grade): _name(name), _sign
 		throw(GradeTooLowException());
 	if (this->_sign_grade < 1 || this->_exec_grade < 1)
 		throw(GradeTooHighException());
-    // this->_sign_grade = sign_grade;
-	// this->_exec_grade = exec_grade;
 	this->_is_signed = false;
 }
 
@@ -58,7 +56,7 @@ void Form::beSigned(const Bureaucrat& b){
 	if (b.getGrade() > this->_sign_grade)
 	{
 		std::cout << b.getName() << " cannot sign " << this->getName() << " because its ";
-		throw(GradeTooHighException());
+		throw(GradeTooLowException());
 	}
 	this->_is_signed = true;
 }
@@ -71,4 +69,13 @@ std::ostream& operator<<(std::ostream& os, const Form& f){
 	else
 		os << "The Form is not signed";
 	return (os);
+}
+
+void Form::execute(Bureaucrat const &executor) const{
+	if (this->getExecGrade() < executor.getGrade())
+	{
+		std::cout << b.getName() << " cannot execute " << this->getName() << " because its ";
+		throw(GradeTooLowException());
+	}
+	action(!!!!!);
 }
