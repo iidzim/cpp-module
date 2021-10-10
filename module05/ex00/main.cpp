@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:11:54 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/09 19:39:32 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/10 10:43:47 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,13 @@
 int main (void){
 
 	Bureaucrat b1("boss", 1);
-	try{
-		b1.incrementGrade();
-	}
-	catch(Bureaucrat::GradeTooHighException& e){
-		std::cout << b1.msg() << std::endl;
-	}
-	
 	Bureaucrat b2("employee", 150);
 	try{
 		b2.incrementGrade();
+		b1.decrementGrade();
 	}
-	catch(Bureaucrat::GradeTooLowException& e){
-		std::cout << b2.msg() << std::endl;
+	catch(std::exception& e){
+		std::cout << e.what() << std::endl;
 	}
-	
 	return (0);
 }
