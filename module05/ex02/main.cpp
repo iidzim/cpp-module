@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:11:54 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/10 15:08:43 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/10 15:29:26 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int main (void){
 
 	Bureaucrat b1("boss", 1);
 	Bureaucrat b2("employee", 50);
-	Form f1("form1", 5, 1);
-	Form f2("form2", 100, 50);
+	// Form f1("form1", 5, 1);
+	// Form f2("form2", 100, 50);
 	try{
 		std::cout << b1 << std::endl;
 		std::cout << b2 << std::endl;

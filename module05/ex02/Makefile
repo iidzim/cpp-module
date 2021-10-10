@@ -6,16 +6,13 @@
 #    By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 16:06:28 by iidzim            #+#    #+#              #
-#    Updated: 2021/10/10 15:08:37 by iidzim           ###   ########.fr        #
+#    Updated: 2021/10/10 11:59:50 by iidzim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	Forms
+NAME	=	Form
 
-SRC		=	main.cpp Bureaucrat.cpp Form.cpp \
-			ShrubberyCreationForm.cpp \
-			RobotomyRequestForm.cpp \
-			PresidentialPardonForm.cpp
+SRC		=	main.cpp Bureaucrat.cpp Form.cpp
 
 OBJ		=	${SRC:.cpp=.o}
 

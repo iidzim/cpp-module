@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 12:00:25 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/10 15:11:00 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/10 15:01:03 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ Form::Form(std::string name, int sign_grade, int exec_grade): _name(name), _sign
 		throw(GradeTooLowException());
 	if (this->_sign_grade < 1 || this->_exec_grade < 1)
 		throw(GradeTooHighException());
+    // this->_sign_grade = sign_grade;
+	// this->_exec_grade = exec_grade;
 	this->_is_signed = false;
 }
 

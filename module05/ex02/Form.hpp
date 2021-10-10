@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 12:00:48 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/10 15:25:05 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/10 15:01:26 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ class Form{
 			virtual const char* what() const throw() { return ("Grade is Too High !"); }
 	};
 	
-	virtual void Action(std::string target) = 0;
 };
 
 std::ostream& operator<<(std::ostream& os, Form const &f);
