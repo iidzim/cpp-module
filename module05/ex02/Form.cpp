@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 12:00:25 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/10 18:32:59 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/11 18:26:29 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void Form::beSigned(const Bureaucrat& b){
 	if (b.getGrade() > this->_sign_grade)
 	{
 		std::cout << b.getName() << " cannot sign " << this->getName() << " because its ";
-		throw(GradeTooLowException());
+		throw(GradeTooHighException());
 	}
 	this->_is_signed = true;
 }
@@ -71,11 +71,16 @@ std::ostream& operator<<(std::ostream& os, const Form& f){
 	return (os);
 }
 
-void Form::execute(Bureaucrat const &executor) const{
-	if (this->getExecGrade() < executor.getGrade())
+bool Form::check_permission(Bureaucrat const &executor)const {
+	if (this->_is_signed == false)
 	{
-		std::cout << b.getName() << " cannot execute " << this->getName() << " because its ";
+		std::cout << executor.getName() << " cannot sign " << this->getName() << " because its ";
 		throw(GradeTooLowException());
 	}
-	action(????);
+	if (this->getExecGrade() < executor.getGrade())
+	{
+		std::cout << executor.getName() << " cannot execute " << this->getName() << " because its ";
+		throw(GradeTooLowException());
+	}
+	return (1);
 }

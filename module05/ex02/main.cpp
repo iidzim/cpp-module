@@ -6,34 +6,60 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:11:54 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/10 18:40:38 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/11 19:23:23 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-int main (void){
 
-	Bureaucrat b1("boss", 1);
-	Bureaucrat b2("employee", 50);
-	ShrubberyCreationForm f1("target1");
-	RobotomyRequestForm f2("target2");
-	PresidentialPardonForm f3("target3");
-	try{
-		std::cout << b1 << std::endl;
-		std::cout << b2 << std::endl;
-		b2.incrementGrade();
-		b1.decrementGrade();
-		std::cout << b1 << std::endl;
-		std::cout << b2 << std::endl;
-		f1.beSigned(b1);
-		b1.signForm(f1);
-		b2.signForm(f2);
-		f2.beSigned(b2);
-	}
-	catch(std::exception& e){
-		std::cout << e.what() << std::endl;
-	}
-	return (0);
+int main(void){
+    
+    // ShrubberyCreationForm test
+    try {
+        Bureaucrat bur("BUREAUCRAT", 143);
+        ShrubberyCreationForm shru("home");
+
+        shru.beSigned(bur);
+        bur.signForm(shru);
+        shru.execute(bur);
+        // bur.executeForm(shru);
+    }
+    catch(std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+    //RobotomyRequestForm  test 
+    try {
+        Bureaucrat bur2("BUREAUCRAT", 40);
+        RobotomyRequestForm rob("bender");
+
+        rob.beSigned(bur2);
+        bur2.signForm(rob);
+        rob.execute(bur2);
+        // bur2.executeForm(rob);
+    }
+    catch(std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+    //PresidentialPardonForm test
+    try {
+        Bureaucrat bur3("BUREAUCRAT", 9);
+        PresidentialPardonForm pres("prisoner");
+
+        pres.beSigned(bur3);
+        bur3.signForm(pres);
+        pres.execute(bur3);
+        // bur3.executeForm(pres);
+    }
+    catch(std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+    return (0);
 }
