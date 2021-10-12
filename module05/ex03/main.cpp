@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:11:54 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/12 13:26:06 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 14:31:34 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int main(void){
     try{
         rrf->beSigned(bur);
         bur.signForm(*rrf);
-        rrf->execute(bur);//!
-        // bur.executeForm(*rrf);
+        rrf->execute(bur);
+        bur.executeForm(*rrf);
     }
     catch(std::exception &e)
     {

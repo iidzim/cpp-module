@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 21:20:04 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 21:29:56 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 17:46:13 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ void WrongAnimal::set_type(std::string type){
 }
 
 void WrongAnimal::makeSound(void) const{
-    std::cout << "WrongAnimal >> sound" << std::endl;
+    std::cout << "Animal sound" << std::endl;
 }
