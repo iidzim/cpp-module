@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 17:15:58 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/12 18:48:31 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 19:36:38 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,16 @@ Animal::Animal(void): _type("undefined"){
 }
 
 Animal::~Animal(void){
-    std::cout << "Destructor Animal." << std::endl;
+    std::cout << "Default Destructor Animal" << std::endl;
 }
 
 Animal::Animal(const Animal& animal){
+    std::cout << "Copy Constructor Animal" << std::endl;
     *this = animal;
 }
 
 Animal::Animal(std::string type): _type(type){
-    std::cout << "Constructor Animal." << std::endl;
+    std::cout << "Parameterized Constructor Animal" << std::endl;
 }
 
 Animal& Animal::operator=(Animal const &animal){
@@ -42,5 +43,5 @@ void Animal::set_type(std::string type){
 }
 
 void Animal::makeSound(void) const{
-    std::cout << "animal sound" << std::endl;
+    std::cout << "Animal sound" << std::endl;
 }

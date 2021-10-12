@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 21:20:04 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/12 17:46:13 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 20:10:31 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,17 @@ WrongAnimal::WrongAnimal(void): _type("undefined"){
     std::cout << "Default Consrtuctor WrongAnimal" << std::endl;
 }
 
-WrongAnimal::~WrongAnimal(void){}
+WrongAnimal::~WrongAnimal(void){
+    std::cout << "Default Desrtuctor WrongAnimal" << std::endl;
+}
 
 WrongAnimal::WrongAnimal(const WrongAnimal& Wronganimal){
+    std::cout << "copy Consrtuctor WrongAnimal" << std::endl;
     *this = Wronganimal;
 }
 
 WrongAnimal::WrongAnimal(std::string type): _type(type){
+    std::cout << "Parameterized Consrtuctor WrongAnimal" << std::endl;
 }
 
 WrongAnimal& WrongAnimal::operator=(WrongAnimal const &Wronganimal){

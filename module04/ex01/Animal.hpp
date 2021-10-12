@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:50:42 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/09 13:06:29 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 19:37:09 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class Animal{
     Animal(const Animal& animal);
     Animal(std::string type);
 	  Animal& operator=(Animal const &c);
-    void set_type(std::string);
     std::string getType(void)const;
+    void set_type(std::string);
     virtual void makeSound(void) const;
 };
 

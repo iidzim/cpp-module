@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 21:18:32 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 21:24:42 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 20:09:06 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class WrongAnimal{
     std::string _type;
   public:
     WrongAnimal(void);
-    ~WrongAnimal(void);
+    virtual ~WrongAnimal(void);
     WrongAnimal(const WrongAnimal& Wronganimal);
     WrongAnimal(std::string type);
 	  WrongAnimal& operator=(WrongAnimal const &c);

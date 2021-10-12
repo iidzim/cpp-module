@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 20:50:42 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/08 21:19:21 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 20:05:46 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Animal{
     std::string _type;
   public:
     Animal(void);
-    ~Animal(void);
+    virtual ~Animal(void);
     Animal(const Animal& animal);
     Animal(std::string type);
 	  Animal& operator=(Animal const &c);

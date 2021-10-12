@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 21:35:38 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/09 12:38:02 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 18:07:03 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class Brain{
     Brain(const Brain& brain);
     void deepCopy(const Brain& brain);
     Brain& operator=(Brain const &brain);
+    std::string getIdea(int i);
+    void setIdeas(std::string idea);
 };
 
 #endif

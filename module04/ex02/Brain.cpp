@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 11:43:23 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/09 12:51:27 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 18:06:55 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,19 @@ Brain::~Brain(void){
 }
 
 void Brain::deepCopy(const Brain& brain){
-    // delete[]brain;
-    // if (brain.ideas){
-        std::string ideas[100];
-        for (int i = 0; i < 100; i++)
-            this->ideas[i] = brain.ideas[i];
-    // }
-    // else
-        // this->ideas = NULL;
+    std::string ideas[100];
+    for (int i = 0; i < 100; i++)
+        this->ideas[i] = brain.ideas[i];
+}
+
+void Brain::setIdeas(std::string idea){
+    for (int i = 0; i < 100; i++){
+        this->ideas[i] = idea;
+    }
+}
+
+std::string Brain::getIdea(int i){
+    return (this->ideas[i]);
 }
 
 Brain::Brain(const Brain& brain){

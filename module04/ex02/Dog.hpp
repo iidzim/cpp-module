@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 13:25:33 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/09 13:07:03 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 18:46:40 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@ class Dog : public Animal {
 	Brain* _brain;
   public:
 	Dog(void);
-	~Dog(void);
+	virtual ~Dog(void);
 	Dog(const Dog& dog);
-	void deepCopy(const Dog& dog);
 	Dog& operator=(Dog const &dog);
 	void makeSound(void) const;
+	Brain* getBrain(void) const;
+	void setBrain(std::string idea);
 };
 
 #endif

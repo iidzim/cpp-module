@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 17:15:58 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/12 17:46:28 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 20:00:45 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ Animal::Animal(void): _type("undefined"){
     std::cout << "Default Constructor Animal" << std::endl;
 }
 
-Animal::~Animal(void){}
+Animal::~Animal(void){
+    std::cout << "Default Destructor Animal" << std::endl;
+}
 
 Animal::Animal(const Animal& animal){
     *this = animal;
