@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 18:03:22 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/11 19:22:54 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 12:13:04 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,12 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& f
     return (*this);
 }
 
-void RobotomyRequestForm::execute(Bureaucrat const & executor)const{
+bool RobotomyRequestForm::execute(Bureaucrat const & executor)const{
     int n;
     try{
         this->check_permission(executor);
         srand(time(NULL));
         n = rand() % 100 + 1;
-        std::cout << n << std::endl;
         if (n < 50)
             std::cout << _target << " has been robotomized successfully" << std::endl;
         else
@@ -46,5 +45,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor)const{
     }
     catch(std::exception& e){
         std::cout << e.what() << std::endl;
+        return (0);
     }
+    return (1);
 }

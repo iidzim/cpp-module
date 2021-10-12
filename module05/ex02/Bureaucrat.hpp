@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:17:51 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/10 14:48:47 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 11:56:30 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ class Bureaucrat{
 			public:
 				virtual const char* what() const throw() { return ("Grade Too Low !"); }
 		};
+		void executeForm(Form const & form);
 };
 std::ostream& operator<<(std::ostream& os, Bureaucrat const &b);
 

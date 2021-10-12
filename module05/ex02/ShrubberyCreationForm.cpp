@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 16:38:20 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/11 18:27:54 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 12:09:18 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,14 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
     return (*this);
 }
 
-void ShrubberyCreationForm::execute(Bureaucrat const & executor)const{
+bool ShrubberyCreationForm::execute(Bureaucrat const & executor)const{
     try{
         this->check_permission(executor);
         std::ofstream ofs(this->_target + "_shrubbery");
         if (!ofs.good())
         {
             std::cout << "Invalid stream" << std::endl;
-            return ;
+            return (0);
         }
         ofs << "     *-*," << std::endl;
         ofs << " ,*\\/|`| \"" << std::endl;
@@ -57,5 +57,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor)const{
     }
     catch(std::exception& e){
         std::cout << e.what() << std::endl;
+        return (0);
     }
+    return (1);
 }

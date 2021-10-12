@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 18:04:46 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/11 19:17:40 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 12:08:05 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class RobotomyRequestForm : public Form{
 		RobotomyRequestForm(std::string target);
 		RobotomyRequestForm(const RobotomyRequestForm& f);
 		RobotomyRequestForm& operator=(const RobotomyRequestForm& f);
-		void execute(Bureaucrat const & executor)const;
+		bool execute(Bureaucrat const & executor)const;
 };
 
 #endif

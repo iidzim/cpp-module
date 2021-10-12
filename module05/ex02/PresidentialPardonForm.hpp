@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 18:05:38 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/11 19:21:16 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 12:08:13 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class PresidentialPardonForm : public Form{
 		PresidentialPardonForm(std::string target);
 		PresidentialPardonForm(const PresidentialPardonForm& f);
 		PresidentialPardonForm& operator=(const PresidentialPardonForm& f);
-		void execute(Bureaucrat const & executor)const;
+		bool execute(Bureaucrat const & executor)const;
 };
 
 #endif

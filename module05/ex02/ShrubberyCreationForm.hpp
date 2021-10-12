@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 16:38:24 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/11 18:25:54 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 12:07:55 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class ShrubberyCreationForm : public Form{
 		ShrubberyCreationForm(std::string target);
 		ShrubberyCreationForm(const ShrubberyCreationForm& f);
 		ShrubberyCreationForm& operator=(const ShrubberyCreationForm& f);
-		void execute(Bureaucrat const & executor)const;
+		bool execute(Bureaucrat const & executor)const;
 };
 
 #endif

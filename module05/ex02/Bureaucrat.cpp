@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 17:57:53 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/10 14:57:29 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 12:12:51 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,11 @@ void Bureaucrat::signForm(const Form& f){
 std::ostream& operator<<(std::ostream& os, Bureaucrat const &b){
 	os << b.getName() << ", bureaucrate grade " << b.getGrade();
 	return (os);
+}
+
+void Bureaucrat::executeForm(Form const & form){
+	if (form.execute(*this))
+		std::cout << "executeForm: " << this->name << " executes " << form.getName() << std::endl;
+	else
+		std::cout << "executeForm: " << this->name << " cannot execute " << form.getName() << std::endl;
 }

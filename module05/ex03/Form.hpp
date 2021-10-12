@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 12:00:48 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/11 18:26:23 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 12:09:44 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ class Form{
 		public:
 			virtual const char* what() const throw() { return ("Grade is Too High !"); }
 	};
-	virtual void execute(Bureaucrat const &executor) const = 0;
+	virtual bool execute(Bureaucrat const &executor) const = 0;
 	bool check_permission(Bureaucrat const &executor) const;
 };
 

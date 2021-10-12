@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:11:54 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/12 00:09:53 by mac              ###   ########.fr       */
+/*   Updated: 2021/10/12 12:11:48 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(void){
     
     // ShrubberyCreationForm test
     try {
-        Bureaucrat bur("BUREAUCRAT", 143);
+        Bureaucrat bur("BUREAUCRAT11", 143);
         ShrubberyCreationForm shru("home");
 
         shru.beSigned(bur);
@@ -35,7 +35,7 @@ int main(void){
     }
     //RobotomyRequestForm  test 
     try {
-        Bureaucrat bur2("BUREAUCRAT", 30);
+        Bureaucrat bur2("BUREAUCRAT22", 50);
         RobotomyRequestForm rob("bender");
 
         rob.beSigned(bur2);
@@ -49,13 +49,13 @@ int main(void){
     }
     //PresidentialPardonForm test
     try {
-        Bureaucrat bur3("BUREAUCRAT", 2);
+        Bureaucrat bur3("BUREAUCRAT33", 100);
         PresidentialPardonForm pres("prisoner");
 
         pres.beSigned(bur3);
         bur3.signForm(pres);
         pres.execute(bur3);
-        // bur3.executeForm(pres);
+        bur3.executeForm(pres);
     }
     catch(std::exception &e)
     {

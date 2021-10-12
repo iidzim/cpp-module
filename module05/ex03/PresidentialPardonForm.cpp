@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 18:06:41 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/11 19:23:02 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/12 12:08:17 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,14 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
     return (*this);
 }
 
-void PresidentialPardonForm::execute(Bureaucrat const & executor)const{
+bool PresidentialPardonForm::execute(Bureaucrat const & executor)const{
     try{
         this->check_permission(executor);
         std::cout << _target << " has been pardoned by Zafod Beeblebrox." << std::endl;
     }
     catch(std::exception& e){
         std::cout << e.what() << std::endl;
+        return (0);
     }
+    return (1);
 }
