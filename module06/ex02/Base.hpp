@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 18:43:45 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/17 19:07:13 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/17 20:43:22 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <iostream>
 #include <string>
 #include <exception>
+#include <time.h>
+#include <stdlib.h>
 
 class Base{
   public:
