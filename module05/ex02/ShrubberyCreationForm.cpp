@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 16:38:20 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/12 12:09:18 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/14 18:38:24 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& f){
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& f){
     this->_target = f._target;
-    // this->_is_signed = f.getIsSigned();
     return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 12:00:25 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/10 15:11:00 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/14 18:50:49 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,8 @@ void Form::beSigned(const Bureaucrat& b){
 		std::cout << b.getName() << " cannot sign " << this->getName() << " because its ";
 		throw(GradeTooHighException());
 	}
-	this->_is_signed = true;
+	else
+		this->_is_signed = true;
 }
 
 std::ostream& operator<<(std::ostream& os, const Form& f){

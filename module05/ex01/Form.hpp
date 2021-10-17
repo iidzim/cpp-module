@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 12:00:48 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/10 17:59:41 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/14 18:31:22 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,6 @@ class Form{
 		public:
 			virtual const char* what() const throw() { return ("Grade is Too High !"); }
 	};
-	
-	virtual void Action(std::string target) = 0;
-	void execute(Bureaucrat const &executor) const;
 };
 
 std::ostream& operator<<(std::ostream& os, Form const &f);

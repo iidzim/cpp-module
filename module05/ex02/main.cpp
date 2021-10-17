@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:11:54 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/12 12:11:48 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/14 20:35:26 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 
 int main(void){
     
-    // ShrubberyCreationForm test
+    //? ShrubberyCreationForm test
     try {
-        Bureaucrat bur("BUREAUCRAT11", 143);
+        Bureaucrat bur("BUREAUCRAT11", 13);
         ShrubberyCreationForm shru("home");
 
         shru.beSigned(bur);
@@ -33,33 +33,33 @@ int main(void){
     {
         std::cout << e.what() << std::endl;
     }
-    //RobotomyRequestForm  test 
-    try {
-        Bureaucrat bur2("BUREAUCRAT22", 50);
-        RobotomyRequestForm rob("bender");
+    // //? RobotomyRequestForm  test 
+    // try {
+    //     Bureaucrat bur2("BUREAUCRAT22", 25);
+    //     RobotomyRequestForm rob("bender");
 
-        rob.beSigned(bur2);
-        bur2.signForm(rob);
-        rob.execute(bur2);
-        // bur2.executeForm(rob);
-    }
-    catch(std::exception &e)
-    {
-        std::cout << e.what() << std::endl;
-    }
-    //PresidentialPardonForm test
-    try {
-        Bureaucrat bur3("BUREAUCRAT33", 100);
-        PresidentialPardonForm pres("prisoner");
+    //     rob.beSigned(bur2);
+    //     bur2.signForm(rob);
+    //     rob.execute(bur2);
+    //     // bur2.executeForm(rob);
+    // }
+    // catch(std::exception &e)
+    // {
+    //     std::cout << e.what() << std::endl;
+    // }
+    //? PresidentialPardonForm test
+    // try {
+    //     Bureaucrat bur3("BUREAUCRAT33", 3);
+    //     PresidentialPardonForm pres("prisoner");
 
-        pres.beSigned(bur3);
-        bur3.signForm(pres);
-        pres.execute(bur3);
-        bur3.executeForm(pres);
-    }
-    catch(std::exception &e)
-    {
-        std::cout << e.what() << std::endl;
-    }
+    //     pres.beSigned(bur3);
+    //     bur3.signForm(pres);
+    //     pres.execute(bur3);
+    //     // bur3.executeForm(pres);
+    // }
+    // catch(std::exception &e)
+    // {
+    //     std::cout << e.what() << std::endl;
+    // }
     return (0);
 }

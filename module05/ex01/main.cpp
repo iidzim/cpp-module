@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 16:11:54 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/10 15:08:43 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/14 20:23:01 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,11 @@ int main (void){
 		b1.decrementGrade();
 		std::cout << b1 << std::endl;
 		std::cout << b2 << std::endl;
+		std::cout << f1 << std::endl;
 		f1.beSigned(b1);
 		b1.signForm(f1);
-		b2.signForm(f2);
 		f2.beSigned(b2);
+		b2.signForm(f2);
 	}
 	catch(std::exception& e){
 		std::cout << e.what() << std::endl;

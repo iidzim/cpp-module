@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 18:03:22 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/12 12:13:04 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/14 18:37:53 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& f){
 
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& f){
     this->_target = f._target;
-    // this->setIsSigned(f.getIsSigned());
     return (*this);
 }
 

@@ -5,29 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 16:11:54 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/14 20:16:36 by iidzim           ###   ########.fr       */
+/*   Created: 2021/10/17 18:42:22 by iidzim            #+#    #+#             */
+/*   Updated: 2021/10/17 20:20:01 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "Base.hpp"
+
+Base * generate(void){
+    Base *a = new A();
+    Base *b = new B();
+    Base *c = new C();
+    
+    
+}
+
+void identify(Base* p){
+    A child1 = dynamic_cast<A *>(p);
+    B child2 = dynamic_cast<B *>(p); 
+    C child3 = dynamic_cast<C *>(p); 
+}
+
+void identify(Base& p){
+    A child11 = dynamic_cast<A &>(p);
+    B child22 = dynamic_cast<B &>(p); 
+    C child33 = dynamic_cast<C &>(p);
+}
 
 int main (void){
 
-	Bureaucrat b1("boss", 1);
-	Bureaucrat b2("employee", 150);
-	try{
-		std::cout << b1 << std::endl;
-		std::cout << b2 << std::endl;
-		// b2.incrementGrade();
-		// b2.decrementGrade();
-		// b1.decrementGrade();
-		b1.incrementGrade();
-		std::cout << b1 << std::endl;
-		std::cout << b2 << std::endl;
-	}
-	catch(std::exception& e){
-		std::cout << e.what() << std::endl;
-	}
-	return (0);
+    try{
+        Base *base;
+        base = generate();
+        identify(base);
+        identify(*base);
+    }
+    catch(...){
+    }
+    return (0);
 }

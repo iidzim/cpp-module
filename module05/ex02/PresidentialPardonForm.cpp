@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 18:06:41 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/12 12:08:17 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/14 18:37:59 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& f){
 
 PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& f){
     this->_target = f._target;
-    // this->setIsSigned(f.getIsSigned());
     return (*this);
 }
 
