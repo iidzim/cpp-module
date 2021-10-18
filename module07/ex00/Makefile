@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/14 11:42:43 by iidzim            #+#    #+#              #
-#    Updated: 2021/10/18 11:30:06 by iidzim           ###   ########.fr        #
+#    Created: 2021/10/18 12:34:57 by iidzim            #+#    #+#              #
+#    Updated: 2021/10/18 12:35:04 by iidzim           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ScalarConversion
+NAME	=	ex00
 
 SRC		=	main.cpp
 
@@ -30,3 +30,6 @@ fclean	:	clean
 			@ rm -rf $(NAME)
 
 re		:	fclean all
+
+run		:	re
+			@ ./$(NAME)

@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/17 18:11:10 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/17 18:39:08 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/18 11:39:47 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include <exception>
 
 typedef struct s_Data{
-	
 	std::string s;
 	int i;
 	float f;

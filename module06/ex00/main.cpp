@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:47:30 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/17 18:19:52 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/18 15:04:07 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@
 void cast_to_char(std::string s){
 	try{
 		if (s.length() == 1 && isalpha(s[0])){
+			
 			std::cout << "char: '" << s[0] << "'" << std::endl;
 			return ;
 		}
+		if (stoi(s) >= 255)
+			throw "";
 		int str = stoi(s);
 		if (str < 32 || str > 127){
 			std::cout << "char: Non Displayable" << std::endl;
@@ -50,7 +53,7 @@ void cast_to_int(std::string s){
 
 void cast_to_float(std::string s){
 	try{
-		if (s.length() == 1 && isalpha(s[0])){	
+		if (s.length() == 1 && isalpha(s[0])){
 			std::cout << "float: " << static_cast<float>(s[0]) << ".0f" << std::endl;
 			return ;
 		}
@@ -75,9 +78,9 @@ void cast_to_double(std::string s){
 		double num = stod(s);
 		double res = static_cast<double>(num);
 		if (num == stoi(s))
-			std::cout << "float: " << res << ".0" << std::endl;
+			std::cout << "double: " << res << ".0" << std::endl;
 		else
-			std::cout << "float: " << res << std::endl;
+			std::cout << "double: " << res << std::endl;
 	}
 	catch(...){
 		std::cout << "double: " << s << std::endl;
