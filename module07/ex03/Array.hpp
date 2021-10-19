@@ -6,12 +6,17 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 20:20:27 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/19 20:58:52 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/19 21:06:52 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ARRAY_HPP
 #define ARRAY_HPP
+
+#include <iostream>
+#include <string>
+#include <exception>
+#include <time.h>
 
 template <typename T>
 class Array<T>{

@@ -6,14 +6,13 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 20:29:41 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/19 20:58:23 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/19 21:05:03 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Array.hpp"
-
 #define MAX_VAL 750
+
 int main(int, char**)
 {
     Array<int> numbers(MAX_VAL);
