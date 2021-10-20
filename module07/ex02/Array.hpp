@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 20:20:27 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/19 21:06:52 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/20 16:38:53 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,34 +16,57 @@
 #include <iostream>
 #include <string>
 #include <exception>
+#include <stdexcept>
 #include <time.h>
 
 template <typename T>
-class Array<T>{
+class Array{
   private:
     T* _array;
+    int _size;
   public:
     Array(void){
-        this->_array = new T;
+        this->_array = new T[0];
+        this->_size = 0;
     }
+
     ~Array(void){
-        delete _array;
+        delete[]_array;
     }
+
     Array(unsigned int n){
+        this->_size = n;
         this->_array = new T[n];
     }
-    Array(const T& tab){
-        delete[]_array;
-        this->_array = new T;
+
+    Array(const Array<T>& tab){
         *this = tab;
     }
-    T& operator=(T const &tab){
-        if (this != &tab)
-            *(this->_array) = *(tab._array);
+
+    Array<T>& operator=(const Array<T>& tab){
+        if (this != &tab){
+            this->_size = tab._size;
+            this->_array = new T[this->_size];
+            for (int i = 0; i < this->_size; i++)
+                this->_array[i] = tab._array[i];
+        }
         return (*this);
     }
+
     int size(){
-        return (sizeof(this->_array) / sizeof(*(this->_array)));
+        return (this->_size);
+    }
+
+    T& operator[](int index){
+        if (index >= this->size() || index < 0)
+            throw std::exception();
+        return (this->_array[index]);
+    }
+
+    const T& operator[](int index || index < 0) const{
+        if (index >= this->size())
+            throw std::exception();
+        return (this->_array[index]);
     }
 };
 
