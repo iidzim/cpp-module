@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:48:45 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/22 11:58:45 by mac              ###   ########.fr       */
+/*   Updated: 2021/10/22 17:42:38 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "span.hpp"
+#define SIZE 10000
 
 int main(void){
     
@@ -28,9 +29,15 @@ int main(void){
         std::cout << "no space left" << std::endl;
     }
     try{
-        Span span2 = Span(10000);
-        span2.addInfiniteNumber(1000);
-
+        Span span2 = Span(SIZE);
+        std::vector<int> v1;
+        srand(time(NULL));
+	    for (int i = 0; i < SIZE; i++){
+            int value = rand() % 10000;
+		    v1.push_back(value);
+	    }
+        span2.addNumber(v1.begin(), v1.end());
+        // span2.printVector();
         std::cout << span2.shortestSpan() << std::endl;
         std::cout << span2.longestSpan() << std::endl;
     }
