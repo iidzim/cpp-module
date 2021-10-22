@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 17:40:40 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/21 12:54:07 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/21 23:45:28 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,13 @@
 
 template <typename T>
 void easyfind(std::vector<T> tab, int n){
-    unsigned long i;
-    for (i = 0; i < tab.size(); i++){
-        if (tab[i] == n){
-            std::cout << "First occurrence of t[" << i << "] -> " << tab[i] << std::endl;
-            return ;
-        }
+    std::vector<int>::iterator it = std::find (tab.begin(), tab.end(), n);
+    if (it != tab.end()){
+        std::cout << "*First occurrence of t[" << it - tab.begin();
+        std::cout << "] -> " << *it << std::endl;
     }
-    throw "";
+    else
+        throw ""; 
 }
 
 #endif

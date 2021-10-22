@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:49:24 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/21 17:09:53 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/22 11:50:53 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ class Span{
 		Span(void);
 		~Span(void);
 		Span(unsigned int N);
+		Span(const Span& s);
+		Span& operator=(const Span& s);
 		void addNumber(int x);
-		int shortestSpan();
-		int longestSpan();
-
-}
+		void addInfiniteNumber(int n);
+		int shortestSpan(void);
+		int longestSpan(void);
+};
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 17:40:37 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/21 12:55:12 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/21 23:45:06 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@
 int main(void){
 
 	std::vector<int> tab;
-	unsigned long i;
+	std::vector<int>::iterator it;
     srand(time(NULL));
-	for (i = 0; i < SIZE; i++){
+	for (int i = 0; i < SIZE; i++){
         int value = rand() % 10;
 		tab.push_back(value);
 	}
 
-	for (i = 0; i < tab.size(); i++)
-		std::cout << tab[i] << " ";
+	for (it = tab.begin(); it < tab.end(); it++)
+		std::cout << *it << " ";
 	std::cout << std::endl;
 
 	try{
