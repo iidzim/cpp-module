@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:48:45 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/22 17:42:38 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/23 12:17:10 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,12 @@ int main(void){
         sp.addNumber(17);
         sp.addNumber(9);
         sp.addNumber(11);
+        sp.printVector();
         std::cout << sp.shortestSpan() << std::endl;
         std::cout << sp.longestSpan() << std::endl;
+        Span s1(sp);
+        Span s2 = s1;
+        sp.printVector();
     }
     catch(...){
         std::cout << "no space left" << std::endl;

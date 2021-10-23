@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 15:14:48 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/22 18:10:40 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/23 12:28:37 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,17 @@ int main()
     new_stack.pop();
     new_stack.pop();
     std::cout << "size -> " << new_stack.size() << std::endl;
+    std::cout << "--------------" << std::endl;
+
+    MutantStack<std::string> string_stack;
+    string_stack.push("cluster");
+    string_stack.push("agora");
+    string_stack.push("playground");
+    std::cout << "top -> " << string_stack.top() << std::endl;
+    std::cout << "size -> " << string_stack.size() << std::endl;
+    MutantStack<std::string>::iterator iter;
+    for (iter = string_stack.begin(); iter < string_stack.end(); iter++)
+        std::cout << *iter << " ";
+    std::cout << std::endl;
     return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 17:40:40 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/21 23:45:28 by mac              ###   ########.fr       */
+/*   Updated: 2021/10/23 16:06:56 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,21 @@
 #define EASYFIND_HPP
 
 #include <vector>
+#include <list>
 #include <iostream>
 #include <string>
 #include <exception>
 #include <time.h>
 
 template <typename T>
-void easyfind(std::vector<T> tab, int n){
-    std::vector<int>::iterator it = std::find (tab.begin(), tab.end(), n);
+void easyfind(T tab, int n){
+    typename T::iterator it = std::find (tab.begin(), tab.end(), n);
     if (it != tab.end()){
-        std::cout << "*First occurrence of t[" << it - tab.begin();
-        std::cout << "] -> " << *it << std::endl;
+        std::cout << "First occurrence of " << *it << " at tab[";
+        std::cout << std::distance(tab.begin(), it) << "]" << std::endl;
     }
     else
-        throw ""; 
+        throw "";
 }
 
 #endif
