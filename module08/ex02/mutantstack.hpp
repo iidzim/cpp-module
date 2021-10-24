@@ -6,7 +6,7 @@
 /*   By: iidzim <iidzim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 13:44:35 by iidzim            #+#    #+#             */
-/*   Updated: 2021/10/22 18:04:05 by iidzim           ###   ########.fr       */
+/*   Updated: 2021/10/24 16:11:11 by iidzim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ class MutantStack : public std::stack<T>{
     MutantStack(void){}
     ~MutantStack(void){}
     MutantStack(const MutantStack& stack){ *this = stack; }
-    MutantStack& operator=(const MutantStack& stack){ return (*this); }
+    MutantStack& operator=(const MutantStack& stack){
+        this->c = stack.c;
+        return (*this);
+      }
     iterator begin(void){ return (this->c.begin()); }
     iterator end(void){ return (this->c.end()); }
 };
